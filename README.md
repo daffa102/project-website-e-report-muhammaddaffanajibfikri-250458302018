@@ -1,61 +1,156 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Portal Pengaduan Masyarakat - Sipenmas
+Laravel Livewire PHP License
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistem pengaduan masyarakat terdepan dengan teknologi Sipenmas untuk pelayanan publik yang lebih baik. Platform ini memungkinkan warga untuk melaporkan masalah-masalah di lingkungan mereka secara online dengan mudah, transparan, dan terpercaya.    
 
-## About Laravel
+✨ Fitur Utama
+👥 Untuk Warga (Citizens)
+Form Pengaduan Online - Interface yang user-friendly untuk mengajukan pengaduan
+Upload Dokumen & Foto - Mendukung multiple file uploads
+Tracking Status Real-time - Pantau progress pengaduan Anda
+Dashboard Pribadi - Kelola semua pengaduan Anda
+Notifikasi Update - Dapatkan update melalui berbagai channel
+🏢 Untuk Admin
+Dashboard Analytics - Statistik dan performa pelayanan publik
+Manajemen Pengaduan - Kelola semua laporan masuk
+Detail Laporan - Lihat detail lengkap setiap pengaduan
+Manajemen Warga - Kelola data pengguna sistem
+Update Status - Ubah status pengaduan (Pending → Proses → Selesai)
+🎨 UI/UX Features
+Galaxy Theme - Desain futuristik dengan efek kosmik
+Responsive Design - Kompatibel dengan desktop, tablet, dan mobile
+Real-time Updates - Livewire untuk interaksi tanpa reload
+Modern Interface - Menggunakan Tailwind CSS
+🛠 Tech Stack
+Backend: Laravel 12 Framework
+Frontend: Livewire 3.6, Tailwind CSS
+Database: MySQL
+Build Tool: Vite
+Authentication: Laravel Sanctum
+Testing: Pest PHP
+📋 Prerequisites
+PHP 8.2 atau lebih tinggi
+Composer
+Node.js & NPM
+MySQL Database
+Git
+🚀 Instalasi
+1. Clone Repository
+git clone https://github.com/daffa102/project-website-e-report-muhammaddaffanajibfikri-250458302018.git
+cd Sistem-Pengaduan-Masyarakat-main
+2. Install Dependencies
+# Install PHP dependencies
+composer install
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Install Node.js dependencies
+npm install
+3. Environment Setup
+# Copy environment file
+cp .env.example .env
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Generate application key
+php artisan key:generate
+4. Database Setup
+# Create database di MySQL menggunakan 
+# Update konfigurasi database di .env file
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Run migrations
+php artisan migrate
 
-## Learning Laravel
+# Seed database (optional)
+php artisan db:seed
+5. Build Assets
+# Build untuk production
+npm run build
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Atau untuk development
+npm run dev
+6. Jalankan Aplikasi
+# Jalankan server
+php artisan serve
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Aplikasi akan berjalan di http://localhost:8000
 
-### Premium Partners
+📖 Penggunaan
+Registrasi & Login
+Akses halaman utama
+Klik "Masuk" untuk registrasi akun baru
+Login dengan kredensial Anda
+Untuk Warga
+Buat Pengaduan Baru
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Klik menu "Laporan" → "Buat Laporan"
+Isi form: Judul, Detail, Tanggal, Upload Foto
+Klik "Simpan"
+Pantau Status Pengaduan
 
-## Contributing
+Akses menu "Laporan" untuk melihat semua pengaduan
+Klik detail untuk melihat timeline progress
+Untuk Admin
+Dashboard Overview
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Lihat statistik pengaduan
+Monitor performa pelayanan
+Kelola Pengaduan
 
-## Code of Conduct
+Akses "List Laporan" untuk melihat semua pengaduan
+Klik detail untuk melihat informasi lengkap
+Update status pengaduan
+🗄 Struktur Database
+Tabel Utama
+users
+id - Primary key
+name - Nama lengkap
+email - Email unik
+password - Password hash
+timestamps
+laporans
+id - Primary key
+judul - Judul pengaduan
+detail - Deskripsi detail
+tanggal - Tanggal kejadian
+foto - Path file foto
+status - Enum: pending, proses, selesai
+pelapor_id - Foreign key ke users
+timestamps
+🧪 Testing
+# Jalankan semua test
+php artisan test
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+🤝 Contributing
+Kami menerima kontribusi dari komunitas! Silakan ikuti langkah berikut:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Fork repository ini
+Buat branch fitur baru (git checkout -b feature/AmazingFeature)
+Commit perubahan (git commit -m 'Add some AmazingFeature')
+Push ke branch (git push origin feature/AmazingFeature)
+Buat Pull Request
+Development Guidelines
+Ikuti PSR-12 coding standards
+Gunakan meaningful commit messages
+Tambahkan tests untuk fitur baru
+Update dokumentasi jika diperlukan
+📄 License
+Distributed under the MIT License. See LICENSE for more information.
 
-## License
+👥 Tim Pengembang
+Project Lead: Muhamad Daffa Najib Fikri (250458302018)
+Frontend: Muhamad Daffa Najib Fikri (250458302018)
+Backend: Muhamad Daffa Najib Fikri (250458302018)
+Design: Muhamad Daffa Najib Fikri (250458302018)
+📞 Support
+Jika Anda mengalami masalah atau memiliki pertanyaan:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Email: daffanajibfikri@gmail.com
+Call Center: 081364794617
+Live Chat: Tersedia 24/7 di website
+🙏 Acknowledgments
+Laravel Framework - The PHP Framework for Web Artisans
+Livewire - A full-stack framework for Laravel
+Tailwind CSS - A utility-first CSS framework
+Heroicons - Beautiful hand-crafted SVG icons
+Made with ❤ for better public service by Galaxy Portal Team
